@@ -1,0 +1,21 @@
+.authorize {
+    width: 100vw;
+
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .form_title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        width: 320px;
+
+    }
+}

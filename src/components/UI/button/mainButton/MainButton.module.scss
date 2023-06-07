@@ -1,0 +1,14 @@
+.button {
+    background: none;
+    padding: 7px 10px;
+    border: 1px solid #000;
+    border-radius: 7px;
+    transition: 300ms;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}

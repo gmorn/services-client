@@ -1,0 +1,63 @@
+.searchForm {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    min-width: 30px;
+    cursor: pointer;
+    padding: 0 4px;
+    
+    transition: width 300ms ;
+
+    .imgBlock {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        img {
+            margin: 3px;
+            transition: 300ms scale;
+    
+            &:hover {
+                scale: (1.05);
+            }
+            
+            &:active {
+                scale: (0.9);
+            }
+        }
+    }
+
+
+    input {
+        border: none;
+        width: 0;
+
+        transition: 300ms;
+
+        height: 32px;
+        background: none;
+        &:focus{
+            border: none;
+            outline: none;
+        }
+    }
+    
+    &.border {
+        border: 1px solid #000;
+        border-radius: 5px;
+    }
+
+    &.active {
+
+        input {
+            margin-left:7px;
+            border: none;
+            width: 300px;
+        }
+    }
+
+    
+}

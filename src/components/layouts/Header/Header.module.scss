@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    position: relative;
+
+    .searchForm{
+        position: absolute;
+    }
+
+    .logo{
+        margin: 0 auto;
+    }
+
+    .userNav{
+        position: absolute;
+        right: 0;
+    }
+}

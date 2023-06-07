@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import './colors';
+@import './mixins.scss';
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+}
