@@ -1,0 +1,26 @@
+.switcher {
+    display: flex;
+    gap: 16px;
+
+    &.one {
+        img {
+            &:last-child {
+                opacity: 0.6;
+            }
+            &:first-child {
+                opacity: 1;
+            }
+        }
+    }
+
+    &.two {
+        img {
+            &:last-child {
+                opacity: 1;
+            }
+            &:first-child {
+                opacity: 0.6;
+            }
+        }
+    }
+}

@@ -15,6 +15,13 @@ a {
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    min-height: 93vh;
+    position: relative;
+    padding-bottom: 7vh;
+
+    &::-webkit-scrollbar {
+        width: 0;
+      }
 }
 .wrapper {
     margin: 0 auto;

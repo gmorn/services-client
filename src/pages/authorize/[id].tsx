@@ -68,6 +68,7 @@ const AuthorizeSubPage = () => {
             case 'login': {
                 if ( user.password.isValid && 
                     user.email.isValid) {
+                        
                     const pushUser: IUserLogin = {
                         password: user.password.value, 
                         email: user.email.value 

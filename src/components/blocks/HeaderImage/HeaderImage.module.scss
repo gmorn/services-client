@@ -1,0 +1,58 @@
+.header {
+    z-index: 0;
+
+    .loadBLock {
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headerImg {
+        position: relative;
+
+        img {
+            height: 300px;
+            width: 100vw;
+            object-fit: cover;
+        }
+
+        .headerButton {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+
+            input {
+                display: none;
+            }
+        }
+    }
+
+    .addHeader {
+        padding: 30px;
+        input {
+            display: none;
+        }
+        .content {
+            cursor: pointer;
+            border: 3px dashed var(--gray);
+            border-image: 2;
+            border-radius: 30px;
+            color: var(--gray);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                font-size: 20px;
+            }
+
+            &.highlight {
+                border-color: var(--black);
+                background-color: var(--white);
+                color: var(--black);
+            }
+        }
+    }
+}

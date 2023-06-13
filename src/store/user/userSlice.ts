@@ -2,6 +2,8 @@ import { PayloadAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { IUserData, IUserResponse, T_userState } from "./userSlice.types";
 import UserService from "@/services/api/userServices";
 import { IUserLogin } from "@/pages/authorize/authorize.types";
+import { T_NewRole } from "@/services/api/userServices.types";
+import OrgService from "@/services/api/orgServices";
 
 const initialState: T_userState = {
     status: {
@@ -15,22 +17,43 @@ const initialState: T_userState = {
             id: null,
             firstName: '',
             logo: '',
+            role: '',
+            userOrgId: null
         }
     }
 }
+
+
+export const SwitchRole = createAsyncThunk(
+    'user/SwitchRole',
+    async( data: T_NewRole, { dispatch }) => {
+        try {
+            const response = await UserService.newRole(data)
+            console.log(response.data);
+            if (data.role === 'owner') {
+                const orgId = await OrgService.getOrgByUserId(response.data.id)
+                dispatch(userOrg(orgId.data))
+            }
+            
+            dispatch(login(response.data));
+        } catch (error: any) {
+            console.log(error);
+        }
+    }
+)
 
 export const fetchUserLogin = createAsyncThunk(
     'user/fetchUserLogin',
     async (user: IUserLogin, { dispatch }) => {
         try {
-            const response = await UserService.loginUser(user)
+            const response = await UserService.loginUser(user);
             dispatch(login(response.data))
-        } catch (error) {
-            const statusCode = error.response.status
+        } catch (error: any) {
+            const statusCode = error.response?.status;
             if (statusCode === 400) {
-                dispatch(EmailStatus())
+                dispatch(EmailStatus());
             } else if (statusCode === 404) {
-                dispatch(PasswordStatus())
+                dispatch(PasswordStatus());
             } else {
                 console.error(error);
             }
@@ -60,13 +83,26 @@ const userSlice = createSlice({
             localStorage.setItem('user', userLocal)
 
             state.user.isLogin = true
-            state.user.userData.firstName = action.payload.firstName
-            state.user.userData.logo = action.payload.userLogo
+            state.user.userData.firstName = action.payload.first_name
+            state.user.userData.logo = action.payload.user_logo
             state.user.userData.id = action.payload.id
+            state.user.userData.role = action.payload.role
 
         },
         reloadUser(state){
 
+            const user: IUserResponse = JSON.parse(localStorage.getItem('user') ?? '{}')
+            state.user.isLogin = true
+
+            state.user.userData.firstName = user.first_name
+            state.user.userData.logo = user.user_logo
+            state.user.userData.id = user.id
+            state.user.userData.role = user.role
+
+                        
+        },
+        userOrg(state, action: PayloadAction<number>){
+            state.user.userData.userOrgId = action.payload
         },
         resetEmailStatus(state){
             state.status.email = false
@@ -114,6 +150,13 @@ const userSlice = createSlice({
 })
 
 
-export const { login, resetEmailStatus, PasswordStatus, EmailStatus, resetPasswordStatus, reloadUser, out } = userSlice.actions
+export const { login, 
+    resetEmailStatus, 
+    PasswordStatus, 
+    EmailStatus, 
+    resetPasswordStatus, 
+    reloadUser, 
+    out, 
+    userOrg, } = userSlice.actions
 
 export default userSlice.reducer

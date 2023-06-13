@@ -1,0 +1,44 @@
+.inputBlock {
+    label {
+        text-align: center;
+        color: var(--red);
+        font-size: 16px;
+        
+        display: none;
+        margin-top: 12px;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .input {
+        font-size: 20px;
+        padding: 10px;
+        min-width: 350px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        transition: 300ms;
+
+        &::placeholder {
+            font-size: 16px;
+            // color: var(--gray);
+        }
+        &:focus {
+            border-color: var(--black);
+            color: var(--black);
+            outline: none;
+            transform: scale(1.02);
+        }
+    
+        &.verificationPassed {
+            border: 2px solid var(--black);
+        }
+    
+        &.verificationFailed {
+            border: 2px solid var(--red);
+            color: var(--red);
+        }
+    }
+
+}

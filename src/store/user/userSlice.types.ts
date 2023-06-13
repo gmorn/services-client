@@ -1,9 +1,11 @@
 export type T_user = {
-  isLogin: boolean;
+  isLogin: boolean
   userData: {
-    id: number | null;
-    firstName: string;
-    logo: string;
+    id: number | null
+    firstName: string
+    logo: string
+    role: string
+    userOrgId: number | null
   };
 }
 
@@ -27,7 +29,8 @@ export interface IUserData {
 }
 
 export interface IUserResponse {
-  firstName: string
+  first_name: string
   id: number
-  userLogo: string
+  user_logo: string
+  role: string
 }

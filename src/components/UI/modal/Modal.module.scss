@@ -1,0 +1,44 @@
+.modalScreen {
+    display: none;
+    
+    
+    &.active {
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        .modal{
+            z-index: 1;
+            position: absolute;
+            background-color: rgba(#000, 0.6);
+            height: 100vh;
+            width: 100vw;
+        }
+    
+        .content {
+            padding: 40px;
+            z-index: 2;
+            min-height: 100px;
+            min-width: 380px;
+            border-radius: 10px;
+            background: var(--white);
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .closeButton {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}

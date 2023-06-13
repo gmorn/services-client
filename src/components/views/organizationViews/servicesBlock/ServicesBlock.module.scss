@@ -1,0 +1,24 @@
+.serviceBlock {
+
+    .serviceNav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    .servicesList {
+        display: grid;
+        place-items: center;
+        
+        &.one {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 50px;
+        }
+
+        &.two {
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+    }
+}

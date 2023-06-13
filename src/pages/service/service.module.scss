@@ -1,0 +1,59 @@
+
+.flex {
+    display: flex;
+    align-items: start;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.cart {
+    border: 1px solid var(--black);
+    padding: 10px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    
+    z-index: 1;
+
+    height: 300px;
+    width: 180px;
+
+    p {
+        max-width: 180px;
+    }
+
+    .logo {
+        max-width: 180px;
+        height: 180px;
+        border: 1px solid var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &.plug {
+            text-align: center;
+        }
+    }
+
+    .name {
+        margin-top: 12px;
+    }
+
+    .price {
+        margin: 12px 0;
+
+        .content {
+            font-size: 20px;
+        }
+    }
+    
+    .orgName {
+        transition: 300ms;
+
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+}

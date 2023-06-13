@@ -1,0 +1,81 @@
+.userNav {
+    z-index: 1000;
+    
+    .user {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+
+        .userLogo {
+            overflow: hidden;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+    
+            &.user {
+                border: 2px solid var(--green);
+            }
+    
+            &.admin {
+                border: 2px solid var(--red); 
+            }
+            
+            &.owner {
+                border: 2px solid var(--oragne);
+            }
+            
+            &.menage {
+                border: 2px solid var(--yellow);
+            }
+            
+            &.employee {
+                border: 2px solid var(--green);
+            }
+        }
+    }
+    
+
+    .menu {
+        position: absolute;
+        right: -20px;
+        top: 40px;
+
+        p {
+            list-style: none;
+            font-size: 14px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: 300ms;
+
+            &.red {
+                color: var(--red);
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    .message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .modalContent {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

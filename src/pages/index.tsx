@@ -1,20 +1,17 @@
+import { reloadUser } from "@/store/user/userSlice";
 import { useEffect } from "react";
+import {useRouter}  from 'next/router';
+
 
 export default function Home() {
 
-  
-  // useEffect(() => {
-  //   localStorage.getItem('user') ?
-  //   console.log(1) : 
-  //   console.log(2);
-  // }, [])
+  const router = useRouter();
+
+  useEffect(() => {
+    
+    router.push('/home')
+  }, [])
 
 
-  return (
-    <>
-      <main>
-
-      </main>
-    </>
-  )
+  return (<></>)
 }

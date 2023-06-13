@@ -1,0 +1,93 @@
+
+
+.cartBlock {
+    position: relative;
+    transition: 300ms;
+        
+    &:hover {
+        transform: scale(1.03);
+    }
+
+    .deleteButton {
+        border: 1px solid #000;
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 2;
+    
+        background: var(--white);
+    
+        top: -15px;
+        right: -15px;
+        transition: 300ms;
+
+        cursor: pointer;
+    
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .cart {
+        border: 1px solid var(--black);
+        padding: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+        
+        z-index: 1;
+
+    
+        &.one {
+            height: 300px;
+            max-width: 200px;
+        }
+    
+        &.two {
+            height: 200px;
+            width: 500px;
+        }
+    
+        p {
+            max-width: 180px;
+        }
+    
+        .logo {
+            width: 180px;
+            height: 180px;
+            border: 1px solid var(--black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            &.plug {
+                text-align: center;
+            }
+        }
+    
+        .name {
+            margin-top: 12px;
+        }
+    
+        .price {
+            margin: 12px 0;
+    
+            .content {
+                font-size: 20px;
+            }
+        }
+        
+        .orgName {
+            transition: 300ms;
+    
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
