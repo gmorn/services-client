@@ -1,38 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Добро пожаловать в проект на Next.js! Здесь вы найдете описание проекта, инструкции по установке и запуску, а также примеры использования основных функций.
 
-## Getting Started
+Описание проекта
+Проект на Next.js представляет собой веб-приложение, разработанное с использованием React.js и серверного рендеринга. Он обеспечивает быструю и масштабируемую разработку веб-интерфейсов, а также позволяет создавать статические или динамические страницы с применением современных возможностей фронтенд-разработки.
 
-First, run the development server:
+Требования
+Для работы с проектом вам понадобятся следующие установленные компоненты:
 
-```bash
+Node.js (рекомендуемая версия 12 или выше)
+npm (рекомендуемая версия 6 или выше)
+Установка
+Склонируйте репозиторий проекта:
+
+bash
+Copy code
+git clone https://github.com/your-username/your-project.git
+Перейдите в директорию проекта:
+
+bash
+Copy code
+cd your-project
+Установите зависимости:
+
+Copy code
+npm install
+Запуск
+Запустите проект в режиме разработки:
+
+arduino
+Copy code
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Приложение будет доступно по адресу http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Для сборки и запуска проекта в режиме продакшн, выполните следующие команды:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+arduino
+Copy code
+npm run build
+npm start
+Приложение будет доступно по адресу http://localhost:3000.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Использование
+В проекте на Next.js вы найдете следующую структуру файлов и директорий:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+pages/: В этой директории находятся файлы с описанием страниц вашего приложения. Каждый файл в этой директории становится маршрутом вашего приложения. Например, файл pages/index.js представляет собой главную страницу.
+components/: Здесь располагаются компоненты, которые можно использовать на разных страницах проекта.
+styles/: В этой директории находятся файлы со стилями для вашего проекта.
+Изменяйте и дополняйте эти файлы, чтобы создать свое уникальное веб-приложение.
