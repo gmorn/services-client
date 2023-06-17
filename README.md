@@ -11,30 +11,21 @@ npm (рекомендуемая версия 6 или выше)
 Установка
 Склонируйте репозиторий проекта:
 
-bash
-Copy code
 git clone https://github.com/your-username/your-project.git
 Перейдите в директорию проекта:
 
-bash
-Copy code
 cd your-project
 Установите зависимости:
 
-Copy code
 npm install
 Запуск
 Запустите проект в режиме разработки:
 
-arduino
-Copy code
 npm run dev
 Приложение будет доступно по адресу http://localhost:3000.
 
 Для сборки и запуска проекта в режиме продакшн, выполните следующие команды:
 
-arduino
-Copy code
 npm run build
 npm start
 Приложение будет доступно по адресу http://localhost:3000.
